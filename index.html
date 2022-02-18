@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tang{
+           
+            width: 300px;
+           
+            margin: 20px auto;
+            
+        }
+        table{
+            border-collapse: collapse;
+        }
+        th,td{
+          
+            border: solid black ;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="tang">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="jia">
+                    </th>
+                    <th>商品</th>
+                    <th>价钱</th>
+                </tr>
+            </thead>
+            <tbody id="wen">
+                <tr>
+                    <td>
+                        <input type="checkbox">
+
+                    </td>
+                    <td>iPhone8</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+
+                    </td>
+                    <td>iPad Pro</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+
+                    </td>
+                    <td>iPad</td>
+                    <td>6000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+
+                    </td>
+                    <td>iPads</td>
+                    <td>7000</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var qwe=document.getElementById('jia')
+        var asd=document.getElementById('wen').getElementsByTagName('input')
+        qwe.onclick=function(){
+            for(i=0;i<asd.length;i++){
+                asd[i].checked=qwe.checked
+            }
+       
+            
+        }
+        for(i=0;i<asd.length;i++){
+           
+        asd[i].onclick=function(){
+            var flag=true
+            for(i=0;i<asd.length;i++){
+            if(!asd[i].checked){
+             var   flag=false
+                break
+            }
+         
+        } qwe.checked=flag
+        }
+       
+    }
+    </script>
+</body>
+</html>
